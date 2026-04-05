@@ -1,0 +1,16 @@
+db.courses.find({duration:10.5},{name:true,duration:true,id:false})
+
+
+db.courses.find().sort({name:1})
+//for upper and lower companies
+
+db.courses.find().sort({name:1})
+//reverse
+
+db.courses.find({},{name:true,_id:false,duration:true}).sort({name:1})
+//only called are companies
+
+db.courses.find({},{name:true,_id:false,duration:true}).sort({duration:-1}).limit(1)
+//top records will be given
+
+//check those on Compass
