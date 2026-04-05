@@ -1,0 +1,23 @@
+db.courses.createIndex({ name: 1 })
+
+db.courses.createIndex({ duration: -1 })
+
+db.courses.createIndex({ name: 1, duration: -1 })
+
+db.courses.getIndexes()
+
+mongodb+srv://<username>:<password>@cluster0.mongodb.net/
+
+use codeio
+
+db.courses.insertOne({
+  course_name: "MongoDB",
+  duration: "3 hours",
+  videos: 11
+})
+
+
+
+
+
+

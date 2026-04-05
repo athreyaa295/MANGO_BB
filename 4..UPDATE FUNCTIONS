@@ -1,0 +1,21 @@
+db.courses.find()
+
+//it is case sensitive ,
+//first filter and then update
+db.courses.updateOne({name:"react"},{$set:{name:"REACT"}})
+
+db.courses.updateOne({_id: ObjectId('69cbfeb5f44c2650054b5973')},{$set:{name:"React"}})
+//to update
+
+this is update 1
+db.courses.updateOne({name:"React"},{$unset:{completed:""}})
+//newly can be added and eliminated
+
+this is update MANY
+db.courses.updateMany({completed:$exists:false}},{set:{completed:false}}
+
+db.courses.updateMany({duration :10.5},{$set:{completed:true}})
+//to point those
+
+db.courses.find()
+//to find

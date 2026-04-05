@@ -1,0 +1,57 @@
+///FOR AVERAGE MATHEMATICIAN THE AGGREGATION FUNCTION ARE USED 
+
+db.courses.find().sort({videos:1})
+
+//to sort the data
+
+db.courses.find().limit(2)
+//first two
+
+db.courses.find().sort({videos:1}).limit(2)
+//from selected ones
+
+db.courses.find().sort({videos:1}).skip(2).limit(2)
+//first two will be skipped
+
+db.courses.aggregate([ { $match:{videos : {$gte:35}}}])
+//when answer dont come after without saying error it means they are not called properly
+
+5
+
+db.courses.aggregate([ { $match:{videos : {$gte:35}}},{$sort :{videos:-1}},{$limit:2}])
+//$ when using inside {} we need this $ symbol
+
+db.customer.insertMany([{name:"Goms",amount:250},{name:"Goms",amount:400},{name:"Siva",amount:100},{name:"Siva",amount:10},{name:"Goms",amount:150}])
+//to insert MANY
+
+db.customer.find()
+//to find
+
+db.customer.aggregate([{$group:{_id:"$name",total:{$sum:"$amount"}}}])
+
+db.customer.aggregate(
+  [ 
+  {$group:{_id :"$name",MinPurchase:{$avg:"$amount"}}},
+    {$sort:{amount:-1}},
+    {$limit:2}
+    ]
+)
+
+db.customer.aggregate(
+  [ 
+  {$group:{_id :"$name",AvgPurchase:{$avg:"$amount"}}},
+    {$sort:{amount:-1}},
+    {$limit:2},
+    {$out:"Average Purchase"}
+    ]
+)
+
+$out to create new collection
+
+db.customer.aggregate(
+  [ 
+
+    {$count :"name"}
+    ]
+)
+//count will be

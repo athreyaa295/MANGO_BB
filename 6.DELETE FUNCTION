@@ -1,0 +1,21 @@
+use codio
+
+db.courses.find()
+
+cls
+
+MongoInvalidArgumentError: Argument "docs" must be an array of documents
+//array not defined
+db.courses.insertMany([{name:"delete",duration:10},{name:"delete",duration:20},{name:"delete",duration:30}])
+//to insert an full array
+
+db.courses.deleteOne({name:"delete"})
+//to delete one
+
+db.courses.deleteMany({name:"delete"})
+//to delete MANY
+
+db.courses.deleteOne({name:"videos"})
+
+db.courses.find({videos:35})
+//to find specifically

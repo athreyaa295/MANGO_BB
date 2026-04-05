@@ -1,0 +1,25 @@
+db.courses.find({     videos:35},{name:"React"})
+
+db.courses.find({$and:[{     videos:35},{name:"React"}]})
+
+atomic operator - update operator $
+
+db.courses.updateOne({name:"DSA"},{$set:{videos:35}})
+
+db.courses.find({$and : [{name:"React"},{videos:35}]})
+
+db.courses.find({$or : [{name:"React"},{videos:35}]})
+
+db.courses.find({$nor : [{name:"React"},{videos:35}]})
+
+db.courses.find({name:"React"})
+
+db.courses.updateOne({name:"React"},{$push:{instructors:"Goms"}})
+//if already there it will be Snt 
+
+$pull will remove
+$push
+
+db.courses.updateOne({name:"React"},{$pop:{instructors:+1}})
+-1 downremove
++1 upremove

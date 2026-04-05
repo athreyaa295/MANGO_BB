@@ -1,0 +1,29 @@
+show dbs
+// to show everything
+
+db.courses.find()
+//everything comes
+
+db.courses.find({duration:10.5})
+//to select something specifically
+
+db.courses.findOne({duration:10.5})
+//take only findOne
+
+cls 
+
+SECOND HALF::
+
+db.courses.findOne({duration:10.5},{_id : false,name:true,duration:1})
+//duration 1 include field
+// 0 or 1 or true or false may UNSTRUCTURED
+
+db.courses.updateMany({duration:10.5},{$inc:{videos:10}})
+//count inceased by 10
+//matched_count:same
+//modified_count:same
+
+db.courses.updateMany({name:"spring",duration:6.5},{$set:{videos:50}})
+
+db.courses.updateMany({name:"spring",duration:6.5},{$set:{name:"Spring Boot",duration:6.7,videos:50}},{upsert:true})
+//upserted one

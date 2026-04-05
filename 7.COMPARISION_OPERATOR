@@ -1,0 +1,20 @@
+
+when operator usage dollar($) should be used
+
+db.courses.find({videos:{$gt : 30}})
+//greater than
+
+db.courses.find({videos:{$lt : 30}})
+less than
+
+db.courses.find({videos:{$eq : 30}})
+
+
+db.courses.find({videos:{$gte : 30}})
+//greater than equal
+
+db.courses.find({videos:{$lte : 30}})
+//less than equal
+
+db.courses.find({name:{$in:["React","DSA"]}})
+//accurately equal to

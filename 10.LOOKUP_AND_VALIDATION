@@ -1,0 +1,36 @@
+//camel_space
+
+db.createCollection("orders", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: ["item", "price", "customer_id"],
+      properties: {
+        item: {
+          bsonType: "string",
+          description: "item name and must be a string"
+        },
+        price: {
+          bsonType: "number",
+          description: "price must be a number"
+        },
+        customer_id: {
+          bsonType: "objectId",
+          description: "reference to the customer's _id"
+        }
+      }
+    }
+  }
+});
+
+
+db.orders.aggregate([
+  {
+    $lookup: {
+      from: "customer",           // The collection to join with
+      localField: "customer_id",  // Field from the 'orders' collection
+      foreignField: "_id",        // Field from the 'customer' collection
+      as: "customer_details"      // Output array field name
+    }
+  }
+]);

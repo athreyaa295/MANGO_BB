@@ -1,0 +1,73 @@
+MANGO DB - NO SQL DATABASE CONCEPT
+NO SQL - NOT ONLY SQL -ATHUKUM MELA
+UNSTRUCTURED AND SEMISTRUCTURED
+
+NORMAL SQL COLUMNS AND ROWS THERE
+BUT
+//NO SQL
+WE WANT FOREIGNN KEY
+
+JOINING AND RETRIEVE 
+
+IN NORMAL DATABASE ,THEY ARE STORED SEPERATELY
+RDBMS
+
+BSON - STORING,similiar to json Binary json
+JSON - java script notation
+ 
+
+ //IN MAANGODB
+
+ Compass
+
+My Queries
+Data Modeling
+Connections(1)
+
+
+
+Search connections
+
+Databases and Collections
+
+localhost:27017
+
+admin
+
+codeio
+courses
+
+config
+
+local
+
+Welcome
+mongosh: localhost:27017
+codeio
+mongosh: localhost:27017
+
+>_MONGOSH
+
+use  codeio
+switched to db codeio
+show dbs
+admin   40.00 KiB
+config  48.00 KiB
+local   40.00 KiB
+db.createCollectio("courses")
+TypeError: db.createCollectio is not a function
+db.createCollection("courses")
+{ ok: 1 }
+show dbs
+admin   40.00 KiB
+codeio   8.00 KiB
+config  80.00 KiB
+local   40.00 KiB
+use admin
+switched to db admin
+admin
+
+
+
+
+
